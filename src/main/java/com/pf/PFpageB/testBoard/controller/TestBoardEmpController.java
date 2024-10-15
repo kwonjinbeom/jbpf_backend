@@ -24,7 +24,6 @@ public class TestBoardEmpController {
 	
 	@GetMapping("/selectEmpList")
 	public ResponseEntity<List<BoardEmp>> selectEmp(@RequestParam HashMap<String, Object> parameter) throws Exception{
-		System.out.println("run@");
 		List<BoardEmp> empList = testBoardEmpService.selectEmpList(parameter);
         return ResponseEntity.ok().body(empList);
     }
