@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.pf.PFpageB.testBoard.mapper.TestBoardEmpMapper">
+
+	<!-- 로그인 -->
+	<select id="selectEmpList"  parameterType="hashmap"  resultType="com.pf.PFpageB.testBoard.model.BoardEmp">
+        SELECT
+		 	  emp_no
+		 	, emp_name
+		 	, emp_job
+		 	, emp_mgr
+		 	, emp_hiredate
+		 	, sal
+		 	, emp_comm
+		 	, emp_deptno
+        from c##jbpage.emp
+        where 1=1
+			<if test="empNo != null and empNo != ''">
+				AND EMP_NO = #{empNo}
+			</if>
+		 	<if test="keyword != null and !keyword.equals('')">
+				AND (UPPER(EMP_NAME) like '%' + UPPER(#{keyword}) + '%'
+				
+				)
+			</if>
+		order by emp_no
+    </select>
+	
+</mapper>
