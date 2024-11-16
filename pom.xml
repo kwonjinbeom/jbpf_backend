@@ -59,6 +59,7 @@
 		<dependency>
 			<groupId>com.oracle.database.jdbc</groupId>
 			<artifactId>ojdbc8</artifactId>
+			<version>19.8.0.0</version>
 			<scope>runtime</scope>
 		</dependency>
 		<!-- xml 데이터 바인딩을 위한 의존 라이브러리 설정 -->
