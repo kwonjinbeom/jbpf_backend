@@ -10,7 +10,7 @@
 		 	, emp_job
 		 	, emp_mgr
 		 	, emp_hiredate
-		 	, sal
+		 	, sal as sal
 		 	, emp_comm
 		 	, emp_deptno
         -- from c##jbpage.emp
